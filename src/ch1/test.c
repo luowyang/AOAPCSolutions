@@ -1,9 +1,18 @@
 #include<stdio.h>
+#include<time.h>
 
 int main() {
-    unsigned long long k = 0x0010000000000000;
-    double* d = (double*)&k;
-    printf("%e\n", *d);
-    printf("%u\n", 0&&!1);
+    const int mod = 1000000;
+    int n;
+    int sum = 0.0;
+    int fact = 1;
+    scanf("%d", &n);
+    long long t = clock();
+    for (int i = 1; i <= n; i++) {
+        fact = (fact * i) % mod;
+        sum = (fact + sum) % mod;
+    }
+    printf("%06d\n", sum);
+    printf("time consumed: %.2f\n", (double)(clock() - t) / CLOCKS_PER_SEC);
     return 0;
 }

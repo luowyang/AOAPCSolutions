@@ -1,0 +1,9 @@
+A Typical Homework, UVa12412
+
+要点
+1.保存学生信息：数组，或者动态数组
+2.查询：用sidMap保存未被删除的sid，用nameMap保存未被删除的name
+3.插入：向线性表添加元素，同时维护sidMap和nameMap
+4.删除：维护维护sidMap和nameMap（延迟删除：在某个时候集中清理被删除元素，比如动态数组resize时）
+5.排名：在用户查询之前排序
+6.统计：动态维护统计信息，又或者查询时统计
