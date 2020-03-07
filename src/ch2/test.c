@@ -1,8 +1,9 @@
 #include<stdio.h>
+#include<string.h>
 
 int main() {
-    double i;
-    for (i = 0; i != 10; i += 0.1)
-        printf("%.1f\n", i);
+    int i = 1;
+    i=i++;
+    printf("%d\n", i);
     return 0;
 }
